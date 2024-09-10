@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--<script src="https://elite-uat.sandbox.my.salesforce-sites.com/website/lightning/lightning.out.js"></script> -->
+    <!--<meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    /> -->
+  </head>
+  <body>
+    <!-- Start Copy Lightning Out -->
+    <div data-lightning-out="true"></div>
+    <script>
+      const siteEndpoint =
+        "https://elitevinduspuss--devandreas.sandbox.lightning.force.com/lightning/n/Offer_Form";
+      const appName = "c:OfferFormApp";
+      const componentName = "c:offerFormApp";
+      const targetElm = document.querySelector("[data-lightning-out]");
+      const componentAttributes = {};
+      const callbackFunction = function (cmp) {};
+      // Init Lightning Out through Aura App then create LWC in targetElm
+      $Lightning.use(appName, function () {
+        $Lightning.createComponent(
+          componentName,
+          componentAttributes,
+          targetElm,
+          callbackFunction
+        );
+        siteEndpoint;
+      });
+    </script>
+    <!-- End Copy Lightning Out -->
+  </body>
+</html>
