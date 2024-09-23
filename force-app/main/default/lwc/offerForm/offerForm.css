@@ -1,0 +1,22 @@
+@font-face{
+    font-family: 'FontCustom_VarelaRound';
+    src: url('/resource/FontCustom_VarelaRound/VarelaRound-Regular.ttf') format('truetype');
+}
+
+:host{
+    font-Family: 'FontCustom_VarelaRound', Helvetica, sans-serif;
+   
+    --brand-color:#22ac79;
+    --brand-spacing-inline: 20px;
+
+    --slds-c-button-success-color-background: var(--brand-color);
+    --slds-c-button-success-spacing-inline-end:var(--brand-spacing-inline);
+    --slds-c-button-success-spacing-inline-start:var(--brand-spacing-inline);
+    --slds-c-button-spacing-block-end: 4px;
+    --slds-c-button-spacing-block-start: 4px;
+    --slds-c-button-success-text-color: white;
+    --slds-c-button-success-text-color-hover: var(--brand-color);
+    --slds-c-button-success-text-color-active:var(--brand-color);
+    --slds-c-button-brand-color-background: var(--brand-color); 
+    --slds-c-button-brand-border-color: var(--brand-color);
+}
