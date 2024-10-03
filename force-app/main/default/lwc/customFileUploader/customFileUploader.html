@@ -1,0 +1,33 @@
+<!--
+  @description       : 
+  @author            : Erlend.Hansen@stretch.no | https://trailblazer.me/id/ehansen7
+  @group             : 
+  @last modified on  : 09-23-2024
+  @last modified by  : Erlend.Hansen@stretch.no | https://trailblazer.me/id/ehansen7
+-->
+<template>
+  <lightning-card>
+    <div class="slds-var-m-around_medium">
+      <lightning-input
+        type="file"
+        accept={supportedFileTypes}
+        label="Attachment"
+        onchange={handleReadFile}
+      ></lightning-input>
+    </div>
+    <template if:true={showPillContainer}>
+      <div class="slds-var-m-around_medium">
+        <template for:each={files} for:item="file">
+          <lightning-pill
+            icon-name="utility:file"
+            alternative-text="File Uploaded"
+            key={file.recordId}
+            data-record-id={file.recordId}
+            label={file.fileName}
+            onremove={handleRemove}
+          ></lightning-pill>
+        </template>
+      </div>
+    </template>
+  </lightning-card>
+</template>
