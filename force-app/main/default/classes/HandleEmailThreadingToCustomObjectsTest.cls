@@ -36,8 +36,8 @@ static void makeData(){
         Assert.isTrue(result.success, 'The result should be success');
         Assert.areEqual(2, [SELECT Count() FROM ContentVersion], 'There should be 2 ContentVersion records');
         Assert.areEqual(1, [SELECT Count() FROM ContentDocumentLink WHERE LinkedEntityId = :opportunityId], 'There should be 1 ContentDocumentLink records');
-        Assert.areEqual(1, recievedEmailList.size(), 'There should be 1 email related to DeliveryOrder in status new');
-        Assert.areEqual(opportunityId, recievedEmailList[0].relatedToId, 'Delivery Order should be related to Email Message');
+        Assert.areEqual(1, recievedEmailList.size(), 'There should be 1 email related to Opportunity in status new');
+        Assert.areEqual(opportunityId, recievedEmailList[0].relatedToId, 'Opportunity should be related to Email Message');
         Assert.areEqual(0, [SELECT Count() FROM Case], 'There should be no cases created');       
     }
 
